@@ -7,7 +7,7 @@ Date: 3 September 2025
 Description: Measure throughput of memset (Standard C Library), return average
 throughput for the Raspberry Pi 5 equipped with Cortex A-76 Example compile
 command: g++ -DSIZEARRAY=23529411 -DREPEATED=5 -O3 -ftree-vectorize
--march=armv8-a -mtune=native main_memset.cpp -o program
+-march=armv8.2-a -mtune=native main_memset.cpp -o program
 */
 
 #include <chrono> // https://www.geeksforgeeks.org/measure-execution-time-function-cpp/
