@@ -8,8 +8,8 @@ Description: Experiment file for evaluating multi-striding on the ARM Raspberry 
 Generate assembly files for each striding configuration and array size, compile, run binaries and store measured throughputs in CSV-files.
 """
 
-from microKernelScalars import microKernel as microKernelScalar
-from microKernelVectors import microKernel as microKernelVector
+from microKernel_scalars import microKernel as microKernelScalar
+from microKernel_vectors import microKernel as microKernelVector
 
 # https://www.geeksforgeeks.org/python-subprocess-module/
 import subprocess
@@ -123,19 +123,19 @@ class experiment:
                     # Each array consists of multiple binary runs
                     for repeat in range(self.repeat_binary):
                         data, temp = os.pipe()
-                        # write to STDIN as a byte object(convert string
+                        # Write to STDIN as a byte object(convert string
                         # to bytes with encoding utf8)
                         os.write(temp, bytes("5 10\n", "utf-8"))
                         os.close(temp)
 
                         command = f"./program{stride}x{portion}"
 
-                        # store output of the program as a byte string in s
+                        # Store output of the program as a byte string in s
                         s = subprocess.check_output(
                             command, cwd="../kernels", stdin=data, shell=True
                         )
 
-                        # decode s to a normal string
+                        # Decode s to a normal string
                         result = s.decode("utf-8").split(" ")
 
                         throughput_arr.append(
@@ -157,6 +157,7 @@ class experiment:
         self.generate_kernels()
         self.write_result_to_csv()
 
+
 conf = {
     "type": "Scalar",
     "kernel": "readKernel",
@@ -168,9 +169,8 @@ conf = {
     "repeat_binary": 1,
     "array_steps": 771,
     "number_arrays": 1,
-    "file_name": "test",
+    "file_name": "example_scalar_readKernel",
 }
 
 experiment = experiment(conf)
 experiment.run_experiment()
-
