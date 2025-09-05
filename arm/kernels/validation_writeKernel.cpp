@@ -8,7 +8,7 @@ Description: Validation of the writeKernels scalars and vectors. The kernels
 write the loop counter to array. After kernel function call, validate array to
 check if everything went succesfull. Example compile command: g++
 -DSIZEARRAY=505290240 -DSCALAR=1 -DSTRIDES=2 -DPORTIONS=4 -march=armv8.2-a
-microKernel2x4.s -O0 kernel_validation.cpp -o program2x4
+microKernel2x4.s -O0 validation_writeKernel.cpp -o program2x4
 */
 
 #include <bit>

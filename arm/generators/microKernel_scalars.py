@@ -224,8 +224,7 @@ class microKernel:
         idx_reg = 0
         vreg_idx = 0
 
-        if self.formatting:
-            code.append(f".Loop:\n")
+        code.append(f".Loop:\n")
 
         # Store loop counter in s0 for the writeKernel
         if self.kernel == "writeKernel":
@@ -280,8 +279,9 @@ class microKernel:
         """
         code = []
 
+        code.append(f".Eind:\n")
+
         if self.formatting:
-            code.append(f".Eind:\n")
             code.append(f"\n")
             code.append(f"// put registers on stack \n")
 
