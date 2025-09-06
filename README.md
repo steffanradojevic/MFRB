@@ -15,16 +15,10 @@ We implemented two micro-kernels per micro-architecture (`readKernel` for loads,
 
 ## Project Structure
 
-- **`/analysis`**
-  - Python script to analyze the results from the multi-striding experiments using heatmaps.
-
-- **`/arm`** 
-    -  Assembly file generators, benchmarks and validation program for the Cortex-A76. 
-- **`/results`**
-  - The results of a large experiment using a wide variety of striding configurations, conducted on the Cortex-A76 and SpacemiT K1.
-
-- **`/risc-v`**
-   - Assembly file generators, benchmarks and validation program for the SpacemiT K1.
+- **`/analysis`** - Python script to analyze the results from the multi-striding experiments using heatmaps.
+- **`/arm`** -  Assembly file generators, benchmarks and validation program for the Cortex-A76. 
+- **`/results`** - The results of a large experiment using a wide variety of striding configurations, conducted on the Cortex-A76 and SpacemiT K1.
+- **`/risc-v`** - Assembly file generators, benchmarks and validation program for the SpacemiT K1.
 
 ## Acknowledgements
 This framework and the experiments conducted in this project are based on the paper by Blom et al.: [Multi-Strided Access Patterns to Boost Hardware Prefetching](https://www.researchgate.net/publication/391455066_Multi-Strided_Access_Patterns_to_Boost_Hardware_Prefetching).
