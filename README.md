@@ -8,7 +8,7 @@ This project was developed as part of my bachelor thesis: [Evaluating the effect
 ## Performance Highlights
 
 - **ARM Cortex-A76**: up to 83% of theoretical max bandwidth, and compared to the single-strided baselines, we find speedup factors of 1.51× for scalar loads, 1.47× for scalar stores and 1.54× for vector stores. Most notably, when compared to standard C library function `memset`, we achieve a speedup of 1.55x using vector stores.
-- **RISC-V SpacemiT K1**: 1.03x speedup for scalar writes vs single-strided baseline
+- **RISC-V SpacemiT K1**: 1.03x speedup for scalar writes vs single-strided baseline.
 
 ## Project Overview
 We implemented two micro-kernels per micro-architecture (`readKernel` for loads, `writeKernel` for stores) to measure memory access throughput under different striding configurations. For each micro-architecture, we produce these micro-kernels in ARM and RISC-V assembly based on various parameters, such as striding configurations. We benchmark these micro-kernels and compare the throughput of the single-strided baseline configurations with multi-strided configurations.
