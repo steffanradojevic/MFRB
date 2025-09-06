@@ -3,7 +3,7 @@
 
 Multi-platform framework for the Raspberry Pi 5 equipped with an ARM Cortex-A76 processor, and the Banana Pi BPI-F3 equipped with a RISC-V SpacemiT K1 processor. This framework evaluates the effectiveness of multi-striding on these two micro-architectures. 
 
-This project was developed as part of my bachelor thesis: [Evaluating the effectiveness of Multi-striding on the Raspberry Pi 5 and Banana Pi F-3](https://theses.liacs.nl/3407). 
+This project was developed as part of my bachelor thesis: [Evaluating the Effectiveness of Multi-Striding on the Raspberry Pi 5 and Banana Pi F3](https://theses.liacs.nl/3407). 
 
 ## Performance Highlights
 
