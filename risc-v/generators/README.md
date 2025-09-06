@@ -37,7 +37,7 @@ conf = {
 - `kernel` - Micro-kernel: [`readKernel`] or [`writeKernel`].
 - `strides` - Range of strides we want to conduct the experiment on. In the config example we will have a range of [1-20].
 - `portions` - Range of portions we want to conduct the experiment on. In the config example we will have a range of [1-32].
-- `array_length` - (Starting) array length in elements.
+- `array_length` - (Starting) array length in elements. For the RISC-V experiments, array sizes in bytes cannot exceed 32-bit in value. Support for larger array sizes have to be implemented.
 - `repeat_assembly` - How many times we call the micro-kernel function within a single binary. We take the mean throughput over these calls.
 - `repeat_binary` - How many times do we call the binary. We take the max throughput over these calls.
 - `array_steps` - If we experiment on multiple arrays to reduce address collisions, what is the increment between these arrays. All the measurements from each arrays will be stored as a CSV file.
